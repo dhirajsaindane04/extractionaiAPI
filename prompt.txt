@@ -1,45 +1,40 @@
-Analyze the 'Invoice' PDF in @docs. Extract all data and format it into the following JSON structure. Ensure each field is accurately filled with data from the PDF, and if any data is missing, use null for that field. Ensure that each field is present in the output JSON, even if the value is null. For financial fields, use numeric values (integers or floats) and ensure proper formatting.
-
+Analyze the PDF and extract the data to populate the JSON payload with the following structure:
 {
-    "buyer_address": null,
-    "buyer_city": null,
-    "buyer_country": null,
-    "buyer_name": null,
-    "buyer_postal_code": null,
-    "currency": null,
-    "due_date": null,
-    "einvoiceTypeCode": null,
-    "invoice_date": null,
-    "invoice_no": null,
+    "buyer_address": "",
+    "buyer_city": "",
+    "buyer_country": "",
+    "buyer_name": "",
+    "buyer_postal_code": "",
+    "currency": "",
+    "discount": 0.0,
+    "due_date": "",
+    "invoice_date": "",
+    "invoice_no": "",
     "items": [
         {
             "Amt": 0.0,
-            "Description": null,
+            "Description": "",
             "Disc": 0.0,
             "Net Amt": 0.0,
             "No.": 0,
-            "Qty": 0.0,
+            "Qty": 0,
             "Tax": 0.0,
             "U/Price": 0.0
         }
     ],
-    "payment_term": null,
-    "reference_no": null,
-    "supplier_service_tax_id": null,
+    "payment_term": "",
+    "reference_no": "",
+    "supplier_service_tax_id": "",
     "subtotal": 0.0,
-    "supplier_address": null,
-    "supplier_city": null,
-    "supplier_contact": null,
-    "supplier_country": null,
-    "supplier_email": null,
-    "supplier_name": null,
-    "supplier_postal_code": null,
-    "supplier_reg_no": null,
-    "supplier_website": null,
-    "total": 0.0,
-    "refund": 0.0,
-    "service_tax": 0.0,
-    "apply_amount": 0.0,
-    "bank_transfer": 0.0,
-    "discount":0.0
-} make sure supplier_service_tax_id,supplier_postal_code,supplier_country,currency extracted properly
+    "supplier_address": "",
+    "supplier_city": "",
+    "supplier_contact": "",
+    "supplier_country": "",
+    "supplier_email": "",
+    "supplier_name": "",
+    "supplier_postal_code": "",
+    "supplier_reg_no": "",
+    "supplier_website": "",
+    "total": 0.0
+}
+Ensure all extracted data is properly placed into the corresponding keys in the JSON structure and make sure all cities and countries properly extract from the pdf.
